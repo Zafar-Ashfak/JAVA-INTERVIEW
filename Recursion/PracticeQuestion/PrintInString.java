@@ -20,6 +20,7 @@ public class PrintInString {
 
     void main() {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Program to print a number into string");
         System.out.println("Enter a number");
         int num = sc.nextInt();
         convertIntoString(num);

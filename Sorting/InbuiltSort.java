@@ -9,10 +9,12 @@ public class InbuiltSort {
             System.out.print(element + " ");
         }
     }
+
     public static void main(String[] args) {
-        Integer[] arr = { 5, 4, 1, 3, 2 };
+        Integer[] arr = {5, 4, 1, 3, 2};
 //        Arrays.sort(arr); // Sorting in ascending order
         Arrays.sort(arr, Collections.reverseOrder()); // Sorting in descending order
         printArr(arr);
     }
+
 }

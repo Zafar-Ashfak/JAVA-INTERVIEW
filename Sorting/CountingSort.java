@@ -1,4 +1,6 @@
-public class CountingSort {
+package Sorting;
+
+public  class CountingSort {
     public static void countingSort(int[] arr) { // O(n ^ 2)
         int largest = Integer.MIN_VALUE;
 
