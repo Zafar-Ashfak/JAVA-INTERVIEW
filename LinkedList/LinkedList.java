@@ -28,6 +28,18 @@ public class LinkedList {
         newNode.next = head;
         head = newNode;
     }
+
+    // 2. Add Node at the last of the LinkedList
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = tail =newNode;
+            return;
+        }
+
+        tail.next = newNode;
+        tail = newNode;
+    }
     static void main() {
         LinkedList ll = new LinkedList();
 
