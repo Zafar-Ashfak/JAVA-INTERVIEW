@@ -40,6 +40,17 @@ public class LinkedList {
         tail.next = newNode;
         tail = newNode;
     }
+
+    // Print the LinkedList
+    public void printLinkedList() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
+
     static void main() {
         LinkedList ll = new LinkedList();
 
@@ -49,5 +60,16 @@ public class LinkedList {
         ll.addFirst(3);
         ll.addFirst(2);
         ll.addFirst(1);
+
+        // Adding data at the last
+        ll.addLast(6);
+        ll.addLast(7);
+        ll.addLast(8);
+        ll.addLast(9);
+        ll.addLast(10);
+
+        ll.printLinkedList();
+
+
     }
 }
