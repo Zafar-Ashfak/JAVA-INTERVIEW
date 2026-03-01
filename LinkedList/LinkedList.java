@@ -13,7 +13,29 @@ public class LinkedList {
 
     public static Node head;
     public static Node tail;
-    static void main() {
 
+    // METHODS
+
+//    1. Add Node at First of the LinkedList
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = tail = newNode;
+            return;
+        }
+
+        newNode.next = head;
+        head = newNode;
+    }
+    static void main() {
+        LinkedList ll = new LinkedList();
+
+        // Adding data at the first
+        ll.addFirst(5);
+        ll.addFirst(4);
+        ll.addFirst(3);
+        ll.addFirst(2);
+        ll.addFirst(1);
     }
 }
