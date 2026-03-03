@@ -16,7 +16,7 @@ public class LinkedList {
 
     // METHODS
 
-//    1. Add Node at First of the LinkedList
+    //    1. Add Node at First of the LinkedList
     public void addFirst(int data) {
         Node newNode = new Node(data);
 
@@ -33,13 +33,23 @@ public class LinkedList {
     public void addLast(int data) {
         Node newNode = new Node(data);
         if (head == null) {
-            head = tail =newNode;
+            head = tail = newNode;
             return;
         }
 
         tail.next = newNode;
         tail = newNode;
     }
+
+    // Add in the middle
+    //  Size of the LinkedList
+    //  Remove first Node of the LinkedList
+    //  Remove last Node of the LinkedList
+    //  Search a key in the LinkedList (Iterative)
+    //  Search a key in the LinkedList (Recursive)
+    //  Reverse a LinkedList
+    //  Find And Remove nth Node From End
+    //  Check If a LinkedList is Palindrome
 
     // Print the LinkedList
     public void printLinkedList() {
