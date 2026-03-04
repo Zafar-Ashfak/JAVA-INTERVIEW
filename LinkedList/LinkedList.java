@@ -66,7 +66,7 @@ public class LinkedList {
     }
 
     //  Remove first Node of the LinkedList
-    public  int removeFirst() {
+    public int removeFirst() {
         if (size == 0) {
             System.out.println("LinkedList is empty");
             return Integer.MIN_VALUE;
@@ -82,7 +82,31 @@ public class LinkedList {
             return val;
         }
     }
+
     //  Remove last Node of the LinkedList
+    public int removeLast() {
+        if (size == 0) {
+            System.out.println("LinkedList is empty");
+            return Integer.MIN_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head = null;
+            size = 0;
+            return val;
+        } else {
+            Node temp = head;
+            int i = 0;
+            while (i < size - 2) {
+                temp = temp.next;
+                i++;
+            }
+            int val = tail.data;
+            temp.next = null;
+            size--;
+            return val;
+
+        }
+    }
     //  Search a key in the LinkedList (Iterative)
     //  Search a key in the LinkedList (Recursive)
     //  Reverse a LinkedList
@@ -123,66 +147,8 @@ public class LinkedList {
 
         System.out.println("***************************************");
         System.out.println(STR."Removed Value: \{ll.removeFirst()}");
+        System.out.println(STR."Removed Value: \{ll.removeLast()}");
         ll.printLinkedList();
         System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-        System.out.println();
-
     }
 }
