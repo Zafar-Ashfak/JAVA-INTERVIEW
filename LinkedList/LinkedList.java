@@ -72,7 +72,7 @@ public class LinkedList {
             return Integer.MIN_VALUE;
         } else if (size == 1) {
             int val = head.data;
-            head = null;
+            head = tail = null;
             size = 0;
             return val;
         } else {
@@ -90,25 +90,42 @@ public class LinkedList {
             return Integer.MIN_VALUE;
         } else if (size == 1) {
             int val = head.data;
-            head = null;
+            head = tail = null;
             size = 0;
             return val;
         } else {
-            Node temp = head;
+            Node prev = head;
             int i = 0;
             while (i < size - 2) {
-                temp = temp.next;
+                prev = prev.next;
                 i++;
             }
             int val = tail.data;
-            temp.next = null;
+            prev.next = null;
+            tail = prev;
             size--;
             return val;
 
         }
     }
+
     //  Search a key in the LinkedList (Iterative)
+    public int searchIterative(int key) {
+        Node temp = head;
+        int i = 0;
+        while (temp != null) {
+            if (temp.data == key) {
+                return i;
+            }
+
+            temp = temp.next;
+            i++;
+        }
+
+        return -1;
+    }
     //  Search a key in the LinkedList (Recursive)
+
     //  Reverse a LinkedList
     //  Find And Remove nth Node From End
     //  Check If a LinkedList is Palindrome
@@ -126,29 +143,25 @@ public class LinkedList {
     static void main() {
         LinkedList ll = new LinkedList();
 
-        // Adding data at the first
-        ll.addFirst(5);
-        ll.addFirst(4);
-        ll.addFirst(3);
-        ll.addFirst(2);
-        ll.addFirst(1);
-
         // Adding data at the last
+        ll.addLast(2);
+        ll.addLast(4);
         ll.addLast(6);
-        ll.addLast(7);
         ll.addLast(8);
-        ll.addLast(9);
         ll.addLast(10);
+        ll.addLast(12);
+        ll.addLast(14);
+        ll.addLast(16);
+        ll.addLast(18);
+        ll.addLast(20);
 
-        ll.add(3, 99);
+        int key = 12;
 
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
-
-        System.out.println("***************************************");
-        System.out.println(STR."Removed Value: \{ll.removeFirst()}");
-        System.out.println(STR."Removed Value: \{ll.removeLast()}");
-        ll.printLinkedList();
-        System.out.println(STR."Size of the LinkedList is: \{size}");
+        int idx = ll.searchIterative(key);
+        if (idx == -1) {
+            System.out.println("Key not found");
+        } else {
+            System.out.println(STR."Key is at index: \{idx}");
+        }
     }
 }
