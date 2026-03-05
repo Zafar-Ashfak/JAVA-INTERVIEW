@@ -143,25 +143,5 @@ public class LinkedList {
     static void main() {
         LinkedList ll = new LinkedList();
 
-        // Adding data at the last
-        ll.addLast(2);
-        ll.addLast(4);
-        ll.addLast(6);
-        ll.addLast(8);
-        ll.addLast(10);
-        ll.addLast(12);
-        ll.addLast(14);
-        ll.addLast(16);
-        ll.addLast(18);
-        ll.addLast(20);
-
-        int key = 12;
-
-        int idx = ll.searchIterative(key);
-        if (idx == -1) {
-            System.out.println("Key not found");
-        } else {
-            System.out.println(STR."Key is at index: \{idx}");
-        }
     }
 }
