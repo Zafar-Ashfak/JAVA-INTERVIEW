@@ -124,9 +124,28 @@ public class LinkedList {
 
         return -1;
     }
+
     //  Search a key in the LinkedList (Recursive)
+//    public int searchRecursive(int key) {
+//        return helper(head, key);
+//    }
 
     //  Reverse a LinkedList
+    public void reverseLinkedList() {
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        head = prev;
+    }
+
     //  Find And Remove nth Node From End
     //  Check If a LinkedList is Palindrome
 
@@ -142,6 +161,18 @@ public class LinkedList {
 
     static void main() {
         LinkedList ll = new LinkedList();
+        ll.addLast(1);
+        ll.addLast(2);
+        ll.addLast(3);
+        ll.addLast(4);
+        ll.addLast(5);
+
+        System.out.println("Original LinkedList");
+        ll.printLinkedList();
+
+        System.out.println("Reversed LinkedList");
+        ll.reverseLinkedList();
+        ll.printLinkedList();
 
     }
 }
