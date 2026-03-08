@@ -110,7 +110,7 @@ public class LinkedList {
     }
 
     //  Search a key in the LinkedList (Iterative)
-    public int searchIterative(int key) {
+    public int itrSearch(int key) {
         Node temp = head;
         int i = 0;
         while (temp != null) {
@@ -126,6 +126,28 @@ public class LinkedList {
     }
 
     //  Search a key in the LinkedList (Recursive)
+    public int recSearch(int key) {
+        return helper(head, key);
+    }
+
+    public static int helper(Node head, int key) {
+        // Base Case
+        if (head == null) {
+            return -1;
+        }
+
+        if (head.data == key) {
+            return 0;
+        }
+
+        int idx = helper(head.next, key);
+        if (idx == -1) {
+            return -1;
+        }
+
+        return idx + 1;
+    }
+
 //    public int searchRecursive(int key) {
 //        return helper(head, key);
 //    }
@@ -167,12 +189,13 @@ public class LinkedList {
         ll.addLast(4);
         ll.addLast(5);
 
-        System.out.println("Original LinkedList");
-        ll.printLinkedList();
-
-        System.out.println("Reversed LinkedList");
-        ll.reverseLinkedList();
-        ll.printLinkedList();
+        int key = 4;
+        int idx = ll.recSearch(key);
+        if (idx == -1) {
+            System.out.println("Key not found");
+        } else {
+            System.out.println(STR."Key is at index: \{idx}");
+        }
 
     }
 }
