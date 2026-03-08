@@ -169,7 +169,6 @@ public class LinkedList {
     }
 
     //  Find And Remove nth Node From End
-    //  Check If a LinkedList is Palindrome
 
     // Print the LinkedList
     public void printLinkedList() {
