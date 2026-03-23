@@ -153,7 +153,20 @@ public class LinkedList {
 //    }
 
     //  Reverse a LinkedList
+    public void reverseLinkedList() {
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
 
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        head = prev;
+    }
 
     //  Find And Remove nth Node From End
 
