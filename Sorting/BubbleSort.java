@@ -1,3 +1,5 @@
+// Program to sort numbers using bubble sort
+
 package Sorting;
 
 public class BubbleSort { // O(n ^ 2)
