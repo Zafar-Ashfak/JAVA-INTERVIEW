@@ -1,4 +1,7 @@
+// Program to sort an array using quick sort algorithm
 public class QuickSortAlgo {
+
+  // Time Complexity -> O(n^2)
   public static void quickSort(int arr[], int si, int ei) {
     // Base Case
     if (si >= ei) {
