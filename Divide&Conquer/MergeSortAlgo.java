@@ -1,4 +1,7 @@
+// Program to sort an array using Merge Sort Algorithm
 public class MergeSortAlgo {
+
+  // Time Complexity ->  O(nlog n)
   public static void mergeSort(int arr[], int si, int ei) {
     // Base Case
     if (si >= ei) {
