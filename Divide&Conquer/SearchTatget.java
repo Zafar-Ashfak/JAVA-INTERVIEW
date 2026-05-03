@@ -1,3 +1,4 @@
+// Program to search an element in sorted an rotated array using merge sort algorithm
 public class SearchTatget {
   public static int search(int arr[], int tar, int si, int ei) {
     // Base Case
