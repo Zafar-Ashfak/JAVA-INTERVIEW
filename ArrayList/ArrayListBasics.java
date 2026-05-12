@@ -1,4 +1,5 @@
 // Arraylist basics
+// Program to get maximum element in the array list
 import java.util.ArrayList;
 
 public class ArrayListBasics {
