@@ -1,3 +1,5 @@
+package DivideAndConquer;
+
 public class MergeSortAlgo {
   public static void mergeSort(int arr[], int si, int ei) {
     // Base Case
