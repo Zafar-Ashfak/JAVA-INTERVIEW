@@ -1,4 +1,4 @@
-//z Program to sort numbers using bubble sort
+// Write a program to sort an array using bubble sort
 
 package Sorting;
 
