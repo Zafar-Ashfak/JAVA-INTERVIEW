@@ -23,9 +23,9 @@ public class Basics {
 //        System.out.println(str1.charAt(2));
 
         // ************************************************************************************
-        String st1 = "Dr Doom";
-        String st2 = "Dr Doom";
-        String str3 = new String("Dr Doom");
+        String st1 = "Tony Stark";
+        String st2 = "Tony Stark";
+        String str3 = new String("Tony Stark");
 
         if (st1 == st2) {
             System.out.println("str1 and str2 are equal");
