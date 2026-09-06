@@ -1,3 +1,5 @@
+// Q. Write a java program to append all the alphabets from A to Z in a string.
+
 package String;
 
 public class AppendAlphabet {
