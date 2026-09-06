@@ -1,3 +1,5 @@
+// Q. Write a java program to check if a string is palindrome or not.
+
 package String;
 
 public class PalindromeString {
