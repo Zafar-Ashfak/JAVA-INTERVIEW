@@ -1,5 +1,3 @@
-// Q. Write a java program to compute the percentage of board exam marks of a user.
-
 package Array;
 
 import java.util.Arrays;
@@ -39,7 +37,7 @@ public class Array {
 
 //        System.out.println("Program to compute the percentage of board exam marks of a user.");
 //        Scanner sc = new Scanner(System.in);
-//        System.out.println("Enter your physics, chemistry, math, urdu, and english marks");
+//        System.out.println("Enter your Physics, Chemistry, Math, Urdu, and English marks");
 //        int phy = sc.nextInt();
 //        int che = sc.nextInt();
 //        int math = sc.nextInt();
