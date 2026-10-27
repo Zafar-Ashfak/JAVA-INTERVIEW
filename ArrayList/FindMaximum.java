@@ -1,4 +1,6 @@
-// Program to find the maximum element in an ArrayList
+// Write a Java program to find the maximum element in an ArrayList
+
+package ArrayList;
 import java.util.ArrayList;
 
 public class FindMaximum {
@@ -20,6 +22,6 @@ public class FindMaximum {
       max = Math.max(max, list.get(i));
     }
 
-    System.out.println("Max element in the arraylist is: " + max);
+    System.out.println(STR."Max element in the arraylist is: \{max}");
   }
 }
