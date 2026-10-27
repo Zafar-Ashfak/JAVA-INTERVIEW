@@ -1,4 +1,4 @@
-// Arraylist basics
+package ArrayList;
 import java.util.ArrayList;
 
 public class ArrayListBasics {
@@ -26,7 +26,7 @@ public class ArrayListBasics {
 
     System.out.println(list);
     // Size method -  O(1)
-    System.out.println("Size of the list is: " + list.size()); 
+    System.out.println(STR."Size of the list is: \{list.size()}");
 
     // Get Element - O(1)
     System.out.println(list.get(2));

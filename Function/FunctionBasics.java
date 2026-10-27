@@ -8,19 +8,19 @@ public class FunctionBasics {
     public static void sum() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the first number");
+        System.out.print("Enter the first number: ");
         int num1 = sc.nextInt();
 
-        System.out.println("Enter the second number");
+        System.out.print("Enter the second number: ");
         int num2 = sc.nextInt();
 
-        System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+        System.out.println(STR."\{num1} + \{num2} = \{num1 + num2}");
     }
 
 
     // 2. Take Something Return Nothing
     public static void sub(double num1, double num2) {
-        System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+        System.out.println(STR."\{num1} - \{num2} = \{num1 - num2}");
     }
 
 
@@ -28,10 +28,10 @@ public class FunctionBasics {
     public static int multiply() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the first number");
+        System.out.print("Enter the first number: ");
         int num1 = sc.nextInt();
 
-        System.out.println("Enter the second number");
+        System.out.print("Enter the second number: ");
         int num2 = sc.nextInt();
 
         return num1 * num2;
@@ -68,43 +68,43 @@ public class FunctionBasics {
     // Q 3. Write a java method to swap to numbers using third variable
     public static void swap(int num1, int num2) {
         System.out.println("Before swapping");
-        System.out.println("num1: " + num1 + ", and num2: " + num2);
+        System.out.println(STR."num1: \{num1}, and num2: \{num2}");
 
         int temp = num1;
         num1 = num2;
         num2 = temp;
 
         System.out.println("After swapping");
-        System.out.println("num1: " + num1 + ", and num2: " + num2);
+        System.out.println(STR."num1: \{num1}, and num2: \{num2}");
     }
 
     // Q 4. Write a java method to swap to numbers without using third variable
         public static void optSwap(int num1, int num2) {
         System.out.println("Before swapping");
-        System.out.println("num1: " + num1 + ", and num2: " + num2);
+        System.out.println(STR."num1: \{num1}, and num2: \{num2}");
 
         num1 = num1 + num2;
         num2 = num1 - num2;
         num1 = num1 - num2;
 
         System.out.println("After swapping");
-        System.out.println("num1: " + num1 + ", and num2: " + num2);
+        System.out.println(STR."num1: \{num1}, and num2: \{num2}");
     }
 
     // ****************************************************************************************************************************************************
     // Function Overloading
     public static void calcSum(int num1, int num2) {
-        System.out.println("Sum is: " + (num1 + num2));
+        System.out.println(STR."Sum is: \{num1 + num2}");
     }
 
     // Overloading using datatype
     public static void calcSum(float num1, float num2) {
-        System.out.println("Sum is:  " + (num1 + num2));
+        System.out.println(STR."Sum is:  \{num1 + num2}");
     }
 
     // Overloading using parameter
     public static void calcSum(int num1, int num2, int num3) {
-        System.out.println("Sum is: " + (num1 + num2 + num3));
+        System.out.println(STR."Sum is: \{num1 + num2 + num3}");
     }
 
     // ************************************************************************************************************************************************************
@@ -130,7 +130,7 @@ public class FunctionBasics {
     public static void primesInRange(int range) {
         for (int i = 1; i <= range; i++) {
             if (primeOrNot(i)) {
-                System.out.print(i + " ");
+                System.out.print(STR."\{i} ");
             }
         }
     }
@@ -200,10 +200,10 @@ public class FunctionBasics {
         Scanner sc = new Scanner(System.in);
         System.out.println("Program to compute swap two integer numbers");
 
-        System.out.println("Enter the first number");
+        System.out.print("Enter the first number: ");
         int num1 = sc.nextInt();
 
-        System.out.println("Enter the second number");
+        System.out.print("Enter the second number: ");
         int num2 = sc.nextInt();
 
 //        swap(num1, num2);
